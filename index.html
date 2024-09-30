@@ -1,0 +1,1152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FluxDrop - Professional Video Editing Agency in Navi Mumbai</title>
+    <meta name="description" content="FluxDrop is a leading video editing agency in Navi Mumbai, transforming your vision into cinematic reality. Expert editors, cutting-edge techniques, and stunning results.">
+    <meta name="keywords" content="video editing, cinematic editing, post-production, Navi Mumbai, FluxDrop">
+    <link rel="canonical" href="https://www.fluxdrop.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="/DALL·E 2024-09-27 02.08.29 - A professional logo for a video editing agency called FluxDrop. The design should be in a sleek black-and-white color theme, with a modern, minimali.ico" type="image/x-icon">
+    <link rel="icon" href="/DALL·E 2024-09-27 02.08.29 - A professional logo for a video editing agency called 'FluxDrop.' The design should be in a sleek black-and-white color theme, with a modern, minimali.png" type="image/png">
+    <link rel="apple-touch-icon" href="/DALL·E 2024-09-27 02.08.29 - A professional logo for a video editing agency called 'FluxDrop.' The design should be in a sleek black-and-white color theme, with a modern, minimali.png">
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: rgba(18, 18, 18, 0.8);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+        }
+        nav ul li {
+            margin-left: 30px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #a0a0a0;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-content {
+            text-align: center;
+            z-index: 1;
+        }
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+        .cta-button {
+            background-color: #fff;
+            color: #000;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        .cta-button:hover {
+            background-color: #a0a0a0;
+        }
+        .shape {
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            background: linear-gradient(45deg, #333, #666);
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.5;
+            transition: transform 0.3s ease;
+        }
+        #shape1 { top: -150px; left: -150px; }
+        #shape2 { bottom: -150px; right: -150px; }
+        .showcase {
+            align-items: center;
+            padding: 100px 0;
+            background-color: #111;
+        }
+        .showcase h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+        .showcase-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .showcase-item:hover {
+            transform: scale(1.05);
+        }
+        .showcase-item img {
+            width: 100%;
+            height: auto;
+        }
+        .clients {
+            padding: 100px 0;
+            background-color: #000;
+        }
+        .clients h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+        .client-logos {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .client-logos img {
+            max-width: 150px;
+            margin: 20px;
+            filter: grayscale(100%) brightness(0) invert(1);
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+        }
+        .client-logos img:hover {
+            opacity: 1;
+        }
+        .testimonials {
+            padding: 100px 0;
+            background-color: #111;
+        }
+        .testimonials h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+        }
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .testimonial-item {
+            background-color: #222;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .testimonial-item img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #111;
+            padding: 50px 0 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+        .footer-section {
+            flex: 1;
+            min-width: 200px;
+            margin-bottom: 20px;
+        }
+        .footer-section h3 {
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        .footer-section p, .footer-section ul li a {
+            color: #a0a0a0;
+        }
+        .footer-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        .footer-section ul li a {
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-section ul li a:hover {
+            color: #fff;
+        }
+        .social-icons {
+            margin-top: 15px;
+        }
+        .social-icon {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #333;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+        .social-icon:hover {
+            background-color: #555;
+        }
+        .social-icon i {
+            color: #fff;
+        }
+        .footer-bottom {
+            border-top: 1px solid #333;
+            padding-top: 20px;
+            text-align: center;
+        }
+        .footer-3d-elements {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+        .floating-cube, .floating-sphere, .floating-pyramid {
+            position: absolute;
+            opacity: 0.1;
+        }
+        .floating-cube {
+            width: 60px;
+            height: 60px;
+            background-color: #fff;
+            animation: rotateCube 20s infinite linear;
+            top: 20%;
+            left: 10%;
+        }
+        .floating-sphere {
+            width: 50px;
+            height: 50px;
+            background: radial-gradient(circle at 30% 30%, #fff, #aaa);
+            border-radius: 50%;
+            top: 60%;
+            right: 15%;
+            animation: floatSphere 15s infinite ease-in-out;
+        }
+        .floating-pyramid {
+            width: 0;
+            height: 0;
+            border-left: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 52px solid #fff;
+            animation: rotatePyramid 25s infinite linear;
+            bottom: 20%;
+            left: 20%;
+        }
+        @keyframes rotateCube {
+            0% { transform: rotateX(0deg) rotateY(0deg); }
+            100% { transform: rotateX(360deg) rotateY(360deg); }
+        }
+        @keyframes floatSphere {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        @keyframes rotatePyramid {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
+        }
+        main {
+            flex: 1;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .logo a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .logo a:hover {
+            color: #a0a0a0;
+        }
+        .services, .additional-services {
+            background-color: #111;
+            padding: 100px 0;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        .service-item {
+            background-color: #222;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .service-item i {
+            font-size: 3em;
+            margin-bottom: 20px;
+            color: #4CAF50;
+        }
+        .service-item h3 {
+            font-size: 1.5em;
+            margin-bottom: 15px;
+            color: #fff;
+        }
+        .service-item p {
+            color: #a0a0a0;
+            font-size: 0.9em;
+            line-height: 1.6;
+        }
+        .additional-services {
+            background-color: #0a0a0a;
+        }
+        .additional-services .service-item {
+            background-color: #1a1a1a;
+        }
+        .pricing {
+            background-color: #000;
+            padding: 100px 0;
+        }
+        .pricing-table {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            perspective: 1000px;
+        }
+        .pricing-card {
+            background-color: #222;
+            border-radius: 15px;
+            width: 280px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .pricing-card:hover {
+            transform: translateY(-10px) rotateY(10deg);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .pricing-card.featured {
+            background-color: #333;
+            transform: scale(1.05);
+        }
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-10px) rotateY(-10deg);
+        }
+        .pricing-card.custom {
+            background-color: #444;
+            position: relative;
+            overflow: hidden;
+        }
+        .pricing-card.custom::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            transform: rotate(45deg);
+            animation: shine 3s infinite;
+        }
+        @keyframes shine {
+            0% { transform: translateX(-50%) rotate(45deg); }
+            100% { transform: translateX(150%) rotate(45deg); }
+        }
+        .pricing-card h3 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+        .price {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #4CAF50;
+        }
+        .pricing-card p {
+            color: #a0a0a0;
+            margin-bottom: 20px;
+        }
+        .pricing-card ul {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        .pricing-card ul li {
+            margin-bottom: 10px;
+            color: #ddd;
+            position: relative;
+            padding-left: 25px;
+        }
+        .pricing-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #4CAF50;
+        }
+        .pricing-card .cta-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .pricing-card .cta-button:hover {
+            background-color: #45a049;
+        }
+        @media (max-width: 1200px) {
+            .pricing-table {
+                justify-content: center;
+            }
+            
+            .pricing-card {
+                margin-bottom: 30px;
+            }
+        }
+        /* About Section */
+        .about {
+            background-color: #111;
+            padding: 100px 0;
+        }
+        .about-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 50px;
+        }
+        .about-text {
+            flex: 1;
+        }
+        .about-image {
+            flex: 1;
+        }
+        .about-image img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        /* Testimonials Section */
+        .testimonials {
+            background-color: #000;
+            padding: 100px 0;
+        }
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .testimonial {
+            background-color: #222;
+            padding: 30px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .testimonial p {
+            font-style: italic;
+            margin-bottom: 10px;
+        }
+        .testimonial cite {
+            display: block;
+            text-align: right;
+            font-weight: bold;
+        }
+        /* General Improvements */
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            color: #fff;
+        }
+        .section-description {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 50px;
+            color: #a0a0a0;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about-content {
+                flex-direction: column;
+            }
+            .pricing-table {
+                flex-direction: column;
+                align-items: center;
+            }
+            .pricing-card {
+                width: 100%;
+                max-width: 300px;
+                margin-bottom: 30px;
+            }
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <!-- Add structured data for local business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "FluxDrop Video Editing Agency",
+      "image": "https://www.fluxdrop.com/logo.png",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Navi Mumbai",
+        "addressCountry": "IN"
+      },
+      "url": "https://www.fluxdrop.com",
+      "telephone": "+91XXXXXXXXXX",
+      "priceRange": "₹₹₹"
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <a href="/" title="FluxDrop Home">FluxDrop</a>
+            </div>
+            <ul>
+                <li><a href="#home" title="Home">Home</a></li>
+                <li><a href="#showcase" title="Our Work">Showcase</a></li>
+                <li><a href="#clients" title="Our Clients">Clients</a></li>
+                <li><a href="#contact" title="Contact Us">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>FluxDrop Video Editing Agency</h1>
+                <p>Transforming your vision into cinematic reality</p>
+                <a href="#contact" class="cta-button" title="Get in Touch">Get in Touch</a>
+            </div>
+            <div class="shape cube" id="shape1"></div>
+            <div class="shape sphere" id="shape2"></div>
+            <div class="shape pyramid" id="shape3"></div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <h2 class="section-title">About FluxDrop</h2>
+                <p class="section-description">FluxDrop is a premier video editing agency based in Navi Mumbai. We transform raw footage into captivating visual stories that engage and inspire audiences.</p>
+                <div class="about-content">
+                    <div class="about-text">
+                        <h3>Our Mission</h3>
+                        <p>To elevate your visual content through expert editing, cutting-edge techniques, and creative storytelling.</p>
+                        <h3>Why Choose Us?</h3>
+                        <ul>
+                            <li>Expert team of professional editors</li>
+                            <li>State-of-the-art editing software and equipment</li>
+                            <li>Personalized service tailored to your needs</li>
+                            <li>Quick turnaround times without compromising quality</li>
+                        </ul>
+                    </div>
+                    <div class="about-image">
+                        <!-- Add an image representing your team or workspace -->
+                        <img src="team-image.jpg" alt="FluxDrop editing team at work">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title">Our Core Services</h2>
+                <p class="section-description">At FluxDrop, we offer a range of professional video editing services to bring your vision to life across various platforms.</p>
+                
+                <div class="services-grid">
+                    <div class="service-item">
+                        <i class="fas fa-film"></i>
+                        <h3>Professional Video Editing</h3>
+                        <p>Transform your raw footage into polished, engaging content for any platform.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fab fa-instagram"></i>
+                        <h3>Instagram Edits</h3>
+                        <p>Create eye-catching, scroll-stopping content optimized for Instagram's format.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fab fa-youtube"></i>
+                        <h3>YouTube Long-Form Edits</h3>
+                        <p>Craft compelling long-form content that keeps viewers engaged throughout.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-magic"></i>
+                        <h3>Visual Effects</h3>
+                        <p>Enhance your videos with stunning visual effects that captivate your audience.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-palette"></i>
+                        <h3>Color Grading</h3>
+                        <p>Elevate the mood and visual appeal of your video with expert color grading.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-music"></i>
+                        <h3>Audio Editing</h3>
+                        <p>Perfect your video's sound with professional audio editing and mixing.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="additional-services" class="additional-services">
+            <div class="container">
+                <h2 class="section-title">Additional Services</h2>
+                <p class="section-description">Beyond video editing, we offer complementary services to enhance your digital presence.</p>
+                
+                <div class="services-grid">
+                    <div class="service-item">
+                        <i class="fas fa-image"></i>
+                        <h3>Thumbnail Creation</h3>
+                        <p>Eye-catching thumbnails that increase click-through rates for your videos.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Landing Page Design</h3>
+                        <p>Custom landing pages that convert viewers into customers.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Video SEO Optimization</h3>
+                        <p>Optimize your video content for better search engine rankings.</p>
+                    </div>
+                    <div class="service-item">
+                        <i class="fas fa-closed-captioning"></i>
+                        <h3>Subtitling & Captioning</h3>
+                        <p>Make your content accessible with professional subtitles and captions.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="showcase" class="showcase">
+            <div class="container">
+                <h2 class="section-title">Our Cinematic Masterpieces</h2>
+                <div class="showcase-container">
+                    <div class="showcase-grid">
+                        <div class="showcase-item">
+                            <div class="showcase-item-inner">
+                                <div class="showcase-item-front">
+                                    <video width="225" height="400" controls>
+                                        <source src="s1.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video>
+                                </div>
+                                <div class="showcase-item-back">
+                                    <h3>Cinematic Journey</h3>
+                                    <p>A stunning visual journey through time and space.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-item">
+                            <div class="showcase-item-inner">
+                                <div class="showcase-item-front">
+                                    <video width="225" height="400" controls>
+                                        <source src="s2.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video><project 2">
+                                </div>
+                                <div class="showcase-item-back">
+                                    <h3>Project 2</h3>
+                                    <p>Captivating storytelling through innovative editing techniques.</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="showcase-item">
+                            <div class="showcase-item-inner">
+                                <div class="showcase-item-front">
+                                    <video width="225" height="400" controls>
+                                        <source src="s3.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video><project 3">
+                                </div>
+                                <div class="showcase-item-back">
+                                    <h3>Project 3</h3>
+                                    <p>Pushing the boundaries of visual effects and cinematography.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="showcase-item">
+                            <div class="showcase-item-inner">
+                                <div class="showcase-item-front">
+                                    <video width="225" height="400" controls>
+                                        <source src="s4.mp4" type="video/mp4">
+                                        Your browser does not support the video tag.
+                                    </video><project 4">
+                                </div>
+                                <div class="showcase-item-back">
+                                    <h3>Project 4</h3>
+                                    <p>Elevating visual narratives with cutting-edge post-production mastery.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="pricing">
+            <div class="container">
+                <h2 class="section-title">Pricing Plans</h2>
+                <p class="section-description">Choose the perfect plan for your video editing needs. All plans include dedicated support.</p>
+                
+                <div class="pricing-table">
+                    <div class="pricing-card">
+                        <div class="pricing-card-inner">
+                            <h3>Basic</h3>
+                            <div class="price">₹9,999</div>
+                            <p>per project</p>
+                            <ul>
+                                <li>Up to 5 minutes of edited video</li>
+                                <li>Basic color correction</li>
+                                <li>2 rounds of revisions</li>
+                                <li>Delivery in 5 business days</li>
+                            </ul>
+                            <a href="#contact" class="cta-button">Get Started</a>
+                        </div>
+                    </div>
+                    <div class="pricing-card featured">
+                        <div class="pricing-card-inner">
+                            <h3>Pro</h3>
+                            <div class="price">₹24,999</div>
+                            <p>per project</p>
+                            <ul>
+                                <li>Up to 15 minutes of edited video</li>
+                                <li>Advanced color grading</li>
+                                <li>Basic visual effects</li>
+                                <li>5 rounds of revisions</li>
+                                <li>Delivery in 10 business days</li>
+                            </ul>
+                            <a href="#contact" class="cta-button">Get Started</a>
+                        </div>
+                    </div>
+                    <div class="pricing-card">
+                        <div class="pricing-card-inner">
+                            <h3>Premium</h3>
+                            <div class="price">₹49,999</div>
+                            <p>per project</p>
+                            <ul>
+                                <li>Up to 30 minutes of edited video</li>
+                                <li>Professional color grading</li>
+                                <li>Advanced visual effects</li>
+                                <li>Unlimited revisions</li>
+                                <li>Delivery in 15 business days</li>
+                                <li>Dedicated project manager</li>
+                            </ul>
+                            <a href="#contact" class="cta-button">Get Started</a>
+                        </div>
+                    </div>
+                    <div class="pricing-card custom">
+                        <div class="pricing-card-inner">
+                            <h3>Custom</h3>
+                            <div class="price">Tailored</div>
+                            <p>to your needs</p>
+                            <ul>
+                                <li>Customized video length</li>
+                                <li>Specialized editing techniques</li>
+                                <li>Complex visual effects</li>
+                                <li>Flexible revision policy</li>
+                                <li>Priority delivery</li>
+                                <li>Dedicated team assignment</li>
+                            </ul>
+                            <a href="#contact" class="cta-button">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="clients" class="clients">
+            <div class="container">
+                <h2 class="section-title">Clients We've Collaborated With</h2>
+                <div class="client-showcase">
+                    <div class="client-card">
+                        <div class="client-card-inner">
+                            <div class="client-card-front">
+                                <img src="Aeromotive logo - United States.jpg" height="150" width="150" alt="Client 1">
+                            </div>
+                            <div class="client-card-back">
+                                <i class="fas fa-film"></i>
+                                <p>Award-winning collaboration</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="client-card">
+                        <div class="client-card-inner">
+                            <div class="client-card-front">
+                                <img src="logo design - logo - logos - logo designs - logo designer - logos design - logo designing.jpg" height="150" width="150" alt="Client 2">
+                            </div>
+                            <div class="client-card-back">
+                                <i class="fas fa-video"></i>
+                                <p>Innovative video projects</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="client-card">
+                        <div class="client-card-inner">
+                            <div class="client-card-front">
+                                <img src="Kitaco Logo _ SVG _ Real Company _ Alphabet, Letter K Logo.jpg" height="150" width="150" alt="Client 3">
+                            </div>
+                            <div class="client-card-back">
+                                <i class="fas fa-camera"></i>
+                                <p>Cutting-edge cinematography</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="client-card">
+                        <div class="client-card-inner">
+                            <div class="client-card-front">
+                                <img src="Logo Design Services - Design Your Own Logo _ Fiverr.jpg" height="150" width="150" alt="Client 4">
+                            </div>
+                            <div class="client-card-back">
+                                <i class="fas fa-edit"></i>
+                                <p>Revolutionary post-production</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="floating-elements">
+                <div class="floating-cube">
+                    <div class="cube-face front"></div>
+                    <div class="cube-face back"></div>
+                    <div class="cube-face right"></div>
+                    <div class="cube-face left"></div>
+                    <div class="cube-face top"></div>
+                    <div class="cube-face bottom"></div>
+                </div>
+                <div class="floating-sphere"></div>
+                <div class="floating-pyramid">
+                    <div class="pyramid-face front"></div>
+                    <div class="pyramid-face right"></div>
+                    <div class="pyramid-face left"></div>
+                    <div class="pyramid-face bottom"></div>
+                </div>
+            </div>
+        </section>
+        <style>
+            .clients {
+                position: relative;
+                overflow: hidden;
+            }
+            .client-showcase {
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+                perspective: 1000px;
+            }
+            .client-card {
+                width: 200px;
+                height: 200px;
+                margin: 20px;
+                transform-style: preserve-3d;
+                transition: transform 0.6s;
+            }
+            .client-card:hover .client-card-inner {
+                transform: rotateY(180deg);
+            }
+            .client-card-inner {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                transition: transform 0.6s;
+                transform-style: preserve-3d;
+            }
+            .client-card-front, .client-card-back {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                backface-visibility: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 10px;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            }
+            .client-card-front {
+                background-color: #f8f8f8;
+            }
+            .client-card-back {
+                background-color: #333;
+                color: white;
+                transform: rotateY(180deg);
+                flex-direction: column;
+            }
+            .client-card-back i {
+                font-size: 3em;
+                margin-bottom: 10px;
+            }
+            .floating-elements {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+            }
+            .floating-cube, .floating-sphere, .floating-pyramid {
+                position: absolute;
+                opacity: 0.7;
+            }
+            .floating-cube {
+                width: 100px;
+                height: 100px;
+                transform-style: preserve-3d;
+                animation: rotateCube 20s infinite linear;
+                top: 10%;
+                left: 10%;
+            }
+            .cube-face {
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                background: rgba(100, 100, 100, 0.3);
+                border: 2px solid rgba(255, 255, 255, 0.5);
+            }
+            .floating-sphere {
+                width: 80px;
+                height: 80px;
+                background: radial-gradient(circle at 30% 30%, #fff, #aaa);
+                border-radius: 50%;
+                top: 60%;
+                right: 15%;
+                animation: floatSphere 15s infinite ease-in-out;
+            }
+            .floating-pyramid {
+                width: 0;
+                height: 0;
+                border-left: 50px solid transparent;
+                border-right: 50px solid transparent;
+                border-bottom: 86.6px solid rgba(150, 150, 150, 0.3);
+                transform-style: preserve-3d;
+                animation: rotatePyramid 25s infinite linear;
+                bottom: 20%;
+                left: 20%;
+            }
+            @keyframes rotateCube {
+                0% { transform: rotateX(0deg) rotateY(0deg); }
+                100% { transform: rotateX(360deg) rotateY(360deg); }
+            }
+            @keyframes floatSphere {
+                0%, 100% { transform: translateY(0); }
+                50% { transform: translateY(-30px); }
+            }
+            @keyframes rotatePyramid {
+                0% { transform: rotateY(0deg); }
+                100% { transform: rotateY(360deg); }
+            }
+        </style>
+
+        <section id="testimonials" class="testimonials">
+            <div class="container">
+                <h2 class="section-title">What Our Clients Say</h2>
+                <div class="testimonial-slider">
+                    <div class="testimonial">
+                        <p>"FluxDrop transformed our raw footage into a masterpiece. Their attention to detail and creative vision exceeded our expectations."</p>
+                        <cite>- John Doe, CEO of TechCorp</cite>
+                    </div>
+                    <div class="testimonial">
+                        <p>"Working with FluxDrop was a game-changer for our marketing videos. The team's professionalism and skill are unmatched."</p>
+                        <cite>- Jane Smith, Marketing Director at InnovateCo</cite>
+                    </div>
+                    <!-- Add more testimonials as needed -->
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2 class="section-title">Get in Touch</h2>
+                <div class="contact-container">
+                    <div class="rotating-shape"></div>
+                    <form class="contact-form" id="contact-form" action="/submit-form" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message:</label>
+                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="cta-button">Send Message</button>
+                    </form>
+                </div>
+                <style>
+                    .contact-container {
+                        position: relative;
+                        z-index: 1;
+                        padding: 50px 0;
+                    }
+                    .rotating-shape {
+                        position: absolute;
+                        width: 300px;
+                        height: 300px;
+                        background: linear-gradient(45deg, #333, #666);
+                        border-radius: 20px;
+                        transform-style: preserve-3d;
+                        animation: rotate 20s infinite linear;
+                        opacity: 0.5;
+                        z-index: 0;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                    @keyframes rotate {
+                        0% { transform: translate(-50%, -50%) rotate3d(1, 1, 1, 0deg); }
+                        100% { transform: translate(-50%, -50%) rotate3d(1, 1, 1, 360deg); }
+                    }
+                    .contact-form {
+                        background-color: rgba(18, 18, 18, 0.8);
+                        backdrop-filter: blur(10px);
+                        padding: 30px;
+                        border-radius: 10px;
+                        box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+                        position: relative;
+                        z-index: 1;
+                    }
+                    .form-group {
+                        margin-bottom: 20px;
+                    }
+                    .form-group input,
+                    .form-group textarea {
+                        width: 100%;
+                        padding: 10px;
+                        background-color: rgba(255, 255, 255, 0.1);
+                        border: none;
+                        border-radius: 5px;
+                        color: #fff;
+                        font-size: 16px;
+                    }
+                    .form-group textarea {
+                        height: 150px;
+                        resize: vertical;
+                    }
+                    .cta-button {
+                        width: 100%;
+                        padding: 15px;
+                        font-size: 18px;
+                    }
+                </style>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FluxDrop</h3>
+                    <p>Transforming your vision into cinematic reality</p>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#showcase">Showcase</a></li>
+                        <li><a href="#clients">Clients</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Navi Mumbai, India</p>
+                    <!--<p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>-->
+                    <p><i class="fas fa-envelope"></i> info@fluxdrop.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 FluxDrop Video Editing Agency. All rights reserved.</p>
+            </div>
+        </div>
+        <div class="footer-3d-elements">
+            <div class="floating-cube"></div>
+            <div class="floating-sphere"></div>
+            <div class="floating-pyramid"></div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const shapes = document.querySelectorAll('.shape');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+
+            shapes.forEach((shape) => {
+                const shapeX = (shape.offsetLeft + shape.offsetWidth / 2) / window.innerWidth;
+                const shapeY = (shape.offsetTop + shape.offsetHeight / 2) / window.innerHeight;
+
+                const distanceX = x - shapeX;
+                const distanceY = y - shapeY;
+
+                shape.style.transform = `translate(${distanceX * 50}px, ${distanceY * 50}px)`;
+            });
+        });
+    </script>
+</body>
+</html>
